@@ -1,9 +1,9 @@
 <?php
 
-$host = '<yourservername>.mariadb.database.azure.com';
-$username = '<yourusername>@<yourservername>';
-$password = '<yourpassword>';
-$db_name = 'testdb';
+$host = getenv("DB_HOST");
+$username = getenv("DB_USERNAME");
+$password = getenv("DB_PASSWORD");
+$db_name = getenv("DB_NAME");
 
 echo "mysqlnd_azure.enableRedirect: ", ini_get("mysqlnd_azure.enableRedirect"), "\n";
 $db = mysqli_init();
