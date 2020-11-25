@@ -3,7 +3,7 @@ if [ -f "/home/site/wwwroot/bin/mysqlnd_azure.so" ]; then
     echo "mysqlnd_azure present, no need to install."
 else
     # If not, build and store to /bin
-    apt install git
+    apt install git -y
     git clone https://github.com/microsoft/mysqlnd_azure --depth 1
     cd mysqlnd_azure
     phpize
