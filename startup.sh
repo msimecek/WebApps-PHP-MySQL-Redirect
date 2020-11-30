@@ -1,8 +1,7 @@
 # -----
-# Experimental script used to create the mysqlnd_azure binary during Web App build.
+# Experimental script used to create the mysqlnd_azure binary during Web App startup.
 # -----
 
-# Check if mysqlnd_azure.so present in /bin
 if [ -f "/home/site/wwwroot/bin/mysqlnd_azure.so" ]; then
     echo "mysqlnd_azure present, no need to install."
 else
@@ -17,4 +16,4 @@ else
     cp ./modules/mysqlnd_azure.so /home/site/wwwroot/bin/mysqlnd_azure.so
 fi
 
-
+# Continue as normal / indicate error and restart.
