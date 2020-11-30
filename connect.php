@@ -20,5 +20,4 @@ else {
     print_r ($res);
     $db->close();
 }
-
 ?>
